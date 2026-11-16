@@ -1,5 +1,8 @@
 # Pac-Man em Java 🟡
 
+<img width="4530" height="1184" alt="image" src="https://github.com/user-attachments/assets/a005d845-b68f-4cfd-bdc7-2204adb427be" />
+
+
 Um projeto de estudo para aprender a **desenhar e animar com Java**, usando apenas o
 que já vem com a linguagem (Swing e Java 2D), sem bibliotecas externas.
 
@@ -45,18 +48,6 @@ javac -d bin -sourcepath src src/Jogo.java
 java -cp bin Jogo
 ```
 
-### Ver só a animação de uma direção
-
-Cada classe de desenho também roda sozinha e mostra o Pac-Man grande, parado,
-mexendo a boca. É útil para testar o desenho sem o resto do jogo:
-
-```bash
-java -cp bin pacman.PacManCima
-java -cp bin pacman.PacManBaixo
-java -cp bin pacman.PacManEsquerda
-java -cp bin pacman.PacManDireita
-```
-
 ## 📁 Estrutura do projeto
 
 ```
@@ -76,38 +67,3 @@ src/
     └── WeilGraficos.java      # Classe base para janelas com animação
 ```
 
-## 🧠 Como funciona (resumo)
-
-1. **`Jogo`** abre a janela e coloca nela um **`PainelJogo`**.
-2. O **`PainelJogo`** tem um `Timer` que, a cada 16 ms, avança a animação da boca
-   e chama `repaint()`.
-3. O Swing então chama o `paintComponent`, que manda o **`PacMan`** se desenhar.
-4. Quando você aperta uma tecla, o **`ControleTeclado`** descobre a **`Direcao`**
-   e chama `pacMan.mover(...)`.
-5. O **`PacMan`** escolhe qual classe de desenho usar (`PacManCima`, `PacManBaixo`...)
-   de acordo com a direção atual.
-
-A boca usa o tempo acumulado para calcular a abertura:
-
-```java
-double abertura = 5 + 30 * Math.abs(Math.sin(tempoBoca * 4)); // entre 5° e 35°
-```
-
-## 🗺️ Próximos passos
-
-Ideias para continuar o projeto:
-
-- [ ] Impedir que o Pac-Man saia da tela
-- [ ] Movimento contínuo (continuar andando sem segurar a tecla)
-- [ ] Desenhar um labirinto com paredes
-- [ ] Bolinhas para comer e placar de pontos
-- [ ] Fantasmas
-- [ ] Telas de início e de fim de jogo
-
-## 📚 O que estou aprendendo
-
-- Desenho 2D com `Graphics2D` (`fillArc`, `fillOval`, `fillRect`, anti-aliasing)
-- Animação com `javax.swing.Timer` e `deltaTime`
-- Eventos de teclado com `KeyAdapter`
-- Organização em pacotes e separação de responsabilidades
-- `enum`, `switch` com `->` e herança com classes abstratas
