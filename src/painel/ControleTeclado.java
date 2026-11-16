@@ -9,6 +9,7 @@ import pacman.PacMan;
 // Traduz as teclas apertadas em movimentos do Pac-Man.
 // KeyAdapter já traz keyTyped e keyReleased vazios, então só
 // precisamos escrever o keyPressed.
+
 public class ControleTeclado extends KeyAdapter {
 
     private final PacMan pacMan;

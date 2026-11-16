@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
+import mapa.Mapa;
 import pacman.PacMan;
 
 // A área de desenho do jogo: cria o Pac-Man, liga o teclado
@@ -15,10 +16,14 @@ public class PainelJogo extends JPanel {
 
     private static final int INTERVALO_MS = 16; // ~60 quadros por segundo
 
+    private final Mapa mapa = new Mapa();
     private final PacMan pacMan = new PacMan(375, 275);
 
     public PainelJogo() {
         setBackground(Color.BLACK);
+        setDoubleBuffered(true); // Reduz flickering
+        setPreferredSize(new java.awt.Dimension(800, 600));
+        
         setFocusable(true); // Permite que o painel receba o teclado
         addKeyListener(new ControleTeclado(pacMan));
 
@@ -39,6 +44,7 @@ public class PainelJogo extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        pacMan.desenhar(g2d);
+        mapa.desenhar(g2d);   // Primeiro o mapa (fica no fundo)...
+        pacMan.desenhar(g2d); // ...depois o Pac-Man por cima
     }
 }

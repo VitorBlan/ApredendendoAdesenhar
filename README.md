@@ -2,7 +2,6 @@
 
 <img width="4530" height="1184" alt="image" src="https://github.com/user-attachments/assets/a005d845-b68f-4cfd-bdc7-2204adb427be" />
 
-
 Um projeto de estudo para aprender a **desenhar e animar com Java**, usando apenas o
 que já vem com a linguagem (Swing e Java 2D), sem bibliotecas externas.
 
@@ -20,14 +19,14 @@ e ele vira para o lado em que você manda andar.
 
 ## 🎮 Controles
 
-| Tecla           | Ação                 |
-| --------------- | -------------------- |
-| `↑` ou `W`      | Andar para cima      |
-| `↓` ou `S`      | Andar para baixo     |
-| `←` ou `A`      | Andar para esquerda  |
-| `→` ou `D`      | Andar para direita   |
+| Tecla      | Ação                |
+| ---------- | ------------------- |
+| `↑` ou `W` | Andar para cima     |
+| `↓` ou `S` | Andar para baixo    |
+| `←` ou `A` | Andar para esquerda |
+| `→` ou `D` | Andar para direita  |
 
-## 🚀 Como rodar
+## Como rodar
 
 ### Pré-requisitos
 
@@ -66,4 +65,3 @@ src/
 └── graficos/
     └── WeilGraficos.java      # Classe base para janelas com animação
 ```
-
