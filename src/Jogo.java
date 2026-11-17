@@ -10,7 +10,7 @@ public class Jogo extends JFrame {
 
     public Jogo() {
         setTitle("Pac-Man em Java");
-        setSize(800, 600);
+        setSize(900, 1200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Centraliza a janela na tela
         add(painel);

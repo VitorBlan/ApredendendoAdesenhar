@@ -9,12 +9,29 @@ public class Mapa {
     private static final int TAMANHO_BLOCO = 40; // Tamanho de cada quadradinho em pixels
 
     private final String[] mapa = {
-        "####################",
-        "#o o o o o o o o o  #",
-        "# o #### o ## o #  o#",
-        "# o #           #  o#",
-        "# o #  ##  ##   #  o#",
-        "# o o o o o o o    o#",
+        "#################################",
+        "#               #               #",
+        "#  ## ##        #           ##  #",
+        "#           ##                  #",
+        "#  ## ##         ###     ##     #",
+        "#           #     #             #",
+        "########        ##              #",
+        "       #     #                  #",
+        "       #                        #",
+        "########                        #",
+        "#                               #",
+        "#                               #",
+        "#                               #",
+        "#                               #",
+        "#                               #",
+        "# o #           #               #",
+        "# o #  ##  ##   #              o#",
+        "# o o o o o o o                o#",
+        "#o o o o o o o o o              #",
+        "# o #### o ## o #              o#",
+        "# o #           #              o#",
+        "# o #  ##  ##   #              o#",
+        "# o o o o o o o      o#",
         "####################"
     }; 
 
